@@ -1,4 +1,21 @@
+# Node
+node_modules/
+dist/
 
+# Frontend
+frontend/node_modules/
+frontend/dist/
 
-#Ignore vscode AI rules
-.github\instructions\codacy.instructions.md
+# Backend
+backend/node_modules/
+
+# VS Code
+.vscode/
+frontend/.vscode/
+
+# Environment
+.env
+*.local
+
+# OS
+.DS_Store

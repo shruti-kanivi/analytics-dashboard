@@ -1,0 +1,77 @@
+/* ===== Global Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  background: #09090b;
+  color: #fafafa;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* ===== Layout ===== */
+.app {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  grid-row: 2;
+  grid-column: 2;
+  padding: 24px;
+  overflow-y: auto;
+  background: #09090b;
+}
+
+/* ===== Placeholder (legacy) ===== */
+.data-list {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #27272a;
+  font-size: 14px;
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+/* ===== Buttons ===== */
+button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #04130a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
