@@ -1,0 +1,30 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: analytics-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: analytics-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongo
+    restart: on-failure
+
+  frontend:
+    build: ./frontend
+    container_name: analytics-frontend
+    ports:
+      - "80:8080"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
