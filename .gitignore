@@ -9,13 +9,14 @@ frontend/dist/
 # Backend
 backend/node_modules/
 
-# VS Code
-.vscode/
-frontend/.vscode/
-
 # Environment
 .env
 *.local
+
+# IDE
+.vscode/
+frontend/.vscode/
+.idea/
 
 # OS
 .DS_Store
